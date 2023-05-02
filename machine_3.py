@@ -26,7 +26,8 @@ class GumballMachine():
     def turn_crank(self):
         print('Поворачиваем рычаг...')
         self.state = self.state.turn_crank()
-        self.state, self.count = self.state.dispense(self.count)
+        if isinstance(self.state, StateSold):
+            self.state, self.count = self.state.dispense(self.count)
 
 
 if __name__ == "__main__":

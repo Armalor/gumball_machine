@@ -1,5 +1,6 @@
 from .state import State
 
+
 class StateHasCoin(State):
     def insert_coin(self):
         print("Нельзя вставлять несколько монет")

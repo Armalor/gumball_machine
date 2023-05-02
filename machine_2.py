@@ -1,4 +1,4 @@
-from state import State, StateSoldOut, StateSold, StateNoCoin, StateHasCoin
+from state import State, StateSoldOut, StateSold, StateNoCoin, StateHasCoin, StateWinner
 
 
 class GumballMachine():
@@ -12,6 +12,7 @@ class GumballMachine():
             State.NO_COIN: StateNoCoin(),
             State.HAS_COIN: StateHasCoin(),
             State.SOLD: StateSold(),
+            State.WINNER: StateWinner(),
         }
 
     def __str__(self):
@@ -62,6 +63,7 @@ if __name__ == "__main__":
     machine.eject_coin()
     machine.turn_crank()
     print(machine)
+
     #
     # machine.insert_coin()
     # machine.insert_coin()

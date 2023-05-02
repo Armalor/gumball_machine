@@ -2,11 +2,9 @@ from abc import ABC, abstractmethod
 
 
 class State(ABC):
-    SOLD_OUT = 0
-    NO_COIN = 1
-    HAS_COIN = 2
-    SOLD = 3
-    WINNER = 4
+
+    def __str__(self):
+        return self.__class__.__name__
 
     @abstractmethod
     def insert_coin(self):
@@ -21,5 +19,5 @@ class State(ABC):
         pass
 
     @abstractmethod
-    def dispense(self):
+    def dispense(self, count: int = 0):
         pass

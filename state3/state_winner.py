@@ -1,7 +1,9 @@
 from state3 import State
+from typing import Tuple
 
 
 class StateWinner(State):
+    """Пока не реализовано"""
     def insert_coin(self):
         print("Нельзя вставить монету — нечего продавать")
         from state3 import StateSoldOut
@@ -17,7 +19,6 @@ class StateWinner(State):
         from state3 import StateSoldOut
         return StateSoldOut()
 
-    def dispense(self, count: int = 0):
+    def dispense(self, count: int = 0) -> Tuple[State, int]:
         print("Монет в приемнике нет; жвачки в автомате тоже нет")
-        from state3 import StateSoldOut
-        return StateSoldOut()
+        return self, count

@@ -1,4 +1,5 @@
 from state3.state import State
+from typing import Tuple
 
 
 class StateSoldOut(State):
@@ -14,6 +15,6 @@ class StateSoldOut(State):
         print("Монет в приемнике нет; жвачки в автомате тоже нет")
         return self
 
-    def dispense(self, count: int = 0):
+    def dispense(self, count: int = 0) -> Tuple[State, int]:
         print("Монет в приемнике нет; жвачки в автомате тоже нет")
-        return self
+        return self, count

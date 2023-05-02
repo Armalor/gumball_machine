@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Tuple, Self
+from typing import Tuple
 
 
 class State(ABC):
@@ -20,5 +20,5 @@ class State(ABC):
         pass
 
     @abstractmethod
-    def dispense(self, count: int = 0) -> Tuple[Self, int]:
+    def dispense(self, count: int = 0):
         pass

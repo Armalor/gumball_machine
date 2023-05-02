@@ -6,7 +6,7 @@ class StateNoCoin(State):
     def insert_coin(self):
         print("Монета вставлена")
         from state3 import StateHasCoin
-        return self
+        return StateHasCoin()
 
     def eject_coin(self):
         print("Монет в приемнике нет")

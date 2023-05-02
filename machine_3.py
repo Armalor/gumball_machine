@@ -1,7 +1,7 @@
 from state3 import State, StateSoldOut, StateNoCoin, StateSold
 
 
-class GumballMachine():
+class GumballMachine:
 
     def __init__(self):
         self.state: State = StateSoldOut()

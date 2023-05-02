@@ -1,4 +1,5 @@
 from state3.state import State
+from typing import Tuple
 
 
 class StateSold(State):
@@ -14,7 +15,7 @@ class StateSold(State):
         print("Уже выдаем жвачку! Не дергайте лишний раз, просто подождите, пожалуйста")
         return StateSold()
 
-    def dispense(self, count: int = 0):
+    def dispense(self, count: int = 0) -> Tuple[State, int]:
         print(f'Идет процесс выдачи... Завершен! {count}')
         count -= 1
         from state3 import StateNoCoin, StateSoldOut

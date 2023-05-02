@@ -8,7 +8,6 @@ class GumballMachine():
         self.count = 0
 
     def __str__(self):
-
         return f'Текущее состояние {self.state}; всего жвачек в автомате: {self.count}.'
 
     def add_gumballs(self, count):
